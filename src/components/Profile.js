@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {MdEdit, MdClose} from 'react-icons/md';
 import {HiLocationMarker,HiOfficeBuilding,HiOutlineMail,HiPhone} from 'react-icons/hi';
-import { BsGithub, BsLinkedin, BsGlobe} from 'react-icons/bs';
+import { BsGithub, BsLinkedin} from 'react-icons/bs';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useSelector, useDispatch } from 'react-redux';
@@ -90,7 +90,7 @@ function Profile() {
             <Col md={4} sm={6} className="d-flex flex-wrap">
                 <p className="p-1 m-0" onClick={()=>handleAlertShow("LinkedIn Profile",profile.linkedin)}><BsLinkedin size={30} className="p-1"/>LinkedIn</p>
                 <p className="p-1 m-0" onClick={()=>handleAlertShow("GitHub Profile",profile.github)}><BsGithub size={30} className="p-1"/>GitHub</p>
-                <p className="p-1 m-0" onClick={()=>handleAlertShow("Portfolio",profile.website)}><BsGlobe size={30} className="p-1"/>Portfolio</p>
+                {/* <p className="p-1 m-0" onClick={()=>handleAlertShow("Portfolio",profile.website)}><BsGlobe size={30} className="p-1"/>Portfolio</p> */}
                 <p className="p-1 m-0" onClick={()=>handleAlertShow("Email Address",profile.email)}><HiOutlineMail size={30} className="p-1"/>Email</p>
                 <p className="p-1 m-0" onClick={()=>handleAlertShow("Contact Number",profile.contact)}><HiPhone size={30} className="p-1"/>Contact Number</p>
             </Col>
@@ -128,9 +128,9 @@ function Profile() {
                     <Form.Group className="mb-3">
                         <Form.Control type="text" name="linkedin" size="sm" placeholder="LinkedIn Profile" value={profile.linkedin} onChange={handleProfile}/>
                     </Form.Group>
-                    <Form.Group className="mb-3">
+                    {/* <Form.Group className="mb-3">
                         <Form.Control type="text" name="website" size="sm" placeholder="Your Portfolio Website" value={profile.website} onChange={handleProfile}/>
-                    </Form.Group>
+                    </Form.Group> */}
                     <Form.Group controlId="formFileSm" className="mb-3">
                         <Form.Label>Profile Picture</Form.Label>
                         <Form.Control type="file" size="sm" onChange={handleFile}/>
